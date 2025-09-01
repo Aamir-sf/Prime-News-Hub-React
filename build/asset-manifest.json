@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Prime-News-Hub/static/css/main.dc4d6ff2.css",
+    "main.js": "/Prime-News-Hub/static/js/main.a0325aab.js",
+    "static/js/453.f59e58e5.chunk.js": "/Prime-News-Hub/static/js/453.f59e58e5.chunk.js",
+    "static/media/loading.gif": "/Prime-News-Hub/static/media/loading.0a180a54fcbd8ce3e9d4.gif",
+    "index.html": "/Prime-News-Hub/index.html",
+    "main.dc4d6ff2.css.map": "/Prime-News-Hub/static/css/main.dc4d6ff2.css.map",
+    "main.a0325aab.js.map": "/Prime-News-Hub/static/js/main.a0325aab.js.map",
+    "453.f59e58e5.chunk.js.map": "/Prime-News-Hub/static/js/453.f59e58e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc4d6ff2.css",
+    "static/js/main.a0325aab.js"
+  ]
+}
