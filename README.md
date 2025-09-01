@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # Prime-News-Hub
 >>>>>>> 0ca45320f252d92bd854f44f15ffe8014e267293
+=======
+# Prime-News-Hub
+>>>>>>> dcd1f833a49590a7a0ac3648afc9f983aa036804

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -23,6 +24,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 =======
+=======
+>>>>>>> dcd1f833a49590a7a0ac3648afc9f983aa036804
 # Logs
 logs
 *.log
@@ -162,4 +165,7 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+<<<<<<< HEAD
 >>>>>>> 0ca45320f252d92bd854f44f15ffe8014e267293
+=======
+>>>>>>> dcd1f833a49590a7a0ac3648afc9f983aa036804
