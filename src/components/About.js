@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 
 const About = ({ setProgress }) => {
   useEffect(() => {
-    // LoadingBar animation
+    
     setProgress(30);
     setTimeout(() => setProgress(70), 500);
     setTimeout(() => setProgress(100), 1000);
 
-    // Title change
+    
     document.title = "About - Prime News Hub";
   }, [setProgress]);
 

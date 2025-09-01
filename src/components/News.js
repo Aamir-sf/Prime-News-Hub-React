@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
@@ -12,22 +13,43 @@ const News = (props) => {
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
-  const backendURL = process.env.REACT_APP_BACKEND_URL;
+
+  // const updateNews = async () => {
+  //   props.setProgress(10);
+  //   const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+
+  //   setLoading(true);
+  //   let data = await fetch(url);
+  //   props.setProgress(30);
+  //   let parsedData = await data.json();
+  //   props.setProgress(70);
+  //   setArticles(parsedData.articles);
+  //   setTotalResult(parsedData.totalResults);
+  //   setLoading(false);
+  //   props.setProgress(100);
+  // };
   const updateNews = async () => {
     props.setProgress(10);
-    // const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
-    const url = `${backendURL}/news?country=${props.country}&category=${props.category}&page=${page}&pageSize=${props.pageSize}`;
+
+    const url = `${props.apiUrl}?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
 
     setLoading(true);
-    let data = await fetch(url);
-    props.setProgress(30);
-    let parsedData = await data.json();
-    props.setProgress(70);
-    setArticles(parsedData.articles);
-    setTotalResult(parsedData.totalResults);
-    setLoading(false);
-    props.setProgress(100);
+
+    try {
+      const response = await axios.get(url);
+      const parsedData = response.data;
+
+      props.setProgress(70);
+      setArticles(parsedData.articles);
+      setTotalResult(parsedData.totalResults);
+      setLoading(false);
+      props.setProgress(100);
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+    }
   };
+
   useEffect(() => {
     document.title = `${capitalizeFirstLetter(
       props.category
@@ -35,19 +57,35 @@ const News = (props) => {
     updateNews();
   }, []);
 
+  // const fetchMoreData = async () => {
+  //   const url = `https://newsapi.org/v2/top-headlines?country=${
+  //     props.country
+  //   }&category=${props.category}&apiKey=${props.apiKey}&page=${
+  //     page + 1
+  //   }&pageSize=${props.pageSize}`;
+
+  //   setPage(page + 1);
+  //   let data = await fetch(url);
+  //   let parsedData = await data.json();
+  //   setArticles(articles.concat(parsedData.articles));
+  //   setTotalResult(parsedData.totalResults);
+  // };
   const fetchMoreData = async () => {
-    // const url = `https://newsapi.org/v2/top-headlines?country=${
-    //   props.country
-    // }&category=${props.category}&apiKey=${props.apiKey}&page=${
-    //   page + 1
-    // }&pageSize=${props.pageSize}`;
-       const url = `${backendURL}/news?country=${props.country}&category=${props.category}&page=${page + 1}&pageSize=${props.pageSize}`;
+    const url = `${props.apiUrl}?country=${props.country}&category=${
+      props.category
+    }&apiKey=${props.apiKey}&page=${page + 1}&pageSize=${props.pageSize}`;
 
     setPage(page + 1);
-    let data = await fetch(url);
-    let parsedData = await data.json();
-    setArticles(articles.concat(parsedData.articles));
-    setTotalResult(parsedData.totalResults);
+
+    try {
+      const response = await axios.get(url);
+      const parsedData = response.data;
+
+      setArticles(articles.concat(parsedData.articles));
+      setTotalResult(parsedData.totalResults);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -95,10 +133,19 @@ News.defaultProps = {
   category: "general",
 };
 
+// News.propTypes = {
+//   country: PropTypes.string,
+//   pageSize: PropTypes.number,
+//   category: PropTypes.string,
+// };
 News.propTypes = {
   country: PropTypes.string,
   pageSize: PropTypes.number,
   category: PropTypes.string,
+  apiKey: PropTypes.string,
+  apiUrl: PropTypes.string,
+  setProgress: PropTypes.func,
 };
+
 
 export default News;
