@@ -1,6 +1,6 @@
 # 📰 Prime News Hub
 
-[Live Demo](#) | [API Used](https://newsapi.org/)
+[API Used](https://newsapi.org/)
 
 Prime News Hub is a modern, real-time news web application built with **React.js**. Stay updated with the latest news across multiple categories like Business, Health, Sports, Technology, and more, with a smooth, responsive interface.
 
@@ -42,3 +42,26 @@ Prime News Hub is a modern, real-time news web application built with **React.js
 1. Clone the repository:  
    ```bash
    git clone https://github.com/Aamir-sf/Prime-News-Hub.git
+2. Install dependencies:
+   npm install
+3. Create a .env file in the root folder and add your NewsAPI key:
+   REACT_APP_NEWS_API=YOUR_API_KEY
+4. Start the application:
+   npm start
+
+📦 Folder Structure
+Prime-News-Hub/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── About.js
+│   │   ├── NavBar.js
+│   │   ├── News.js
+│   │   ├── NewsItem.js
+│   │   └── Spinner.js
+│   ├── App.js
+│   └── index.js
+├── .env
+├── package.json
+└── README.md
+
