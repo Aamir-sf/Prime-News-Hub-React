@@ -8,10 +8,6 @@ import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
   const pageSize = 6;
-   
-  const apiKey = process.env.REACT_APP_NEWS_API;
-console.log("API Key:", apiKey); // Debug ke liye
-
   const [progress, setProgress] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchId, setSearchId] = useState(0);
@@ -35,7 +31,6 @@ console.log("API Key:", apiKey); // Debug ke liye
           <Route exact path="/">
             <News
               setProgress={setProgress}
-              apiKey={apiKey}
               key={`general-${searchId}`}
               pageSize={pageSize}
               country="us"
