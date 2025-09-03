@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📰 Prime News Hub
 
 [API Used](https://newsapi.org/)
@@ -65,3 +66,7 @@ Prime-News-Hub/
 ├── package.json
 └── README.md
 
+=======
+# News_Hub
+A modern React news web app with categories, search, and infinite scroll.
+>>>>>>> 5ca822a486cbd6d87918449bbfd385ef1c4171d0
