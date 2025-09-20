@@ -17,7 +17,9 @@
 - **Clean and modern design**
 
 ---
-
+## Live
+- https://prime-news-hub-react.vercel.app/
+---
 ## Screenshots 🖼️
 
 Home Page:
