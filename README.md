@@ -8,7 +8,7 @@
 
 ## Features ✨
 
-- **Real-time news** fetched from [NewsAPI](https://newsapi.org/)
+- **Real-time news** fetched from [NewsAPI](https://newsdata.io/)
 - **Infinite Scroll** for continuous browsing
 - **Progress Bar** to show loading status
 - **Category-wise News**: Business, Entertainment, Health, Science, Sports, Technology, General
