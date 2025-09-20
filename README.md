@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-# 📰 Prime News Hub
+# 📰 Prime News Hub By Aamir
 
 [API Used](https://newsapi.org/)
 
-Prime News Hub is a modern, real-time news web application built with **React.js**. Stay updated with the latest news across multiple categories like Business, Health, Sports, Technology, and more, with a smooth, responsive interface.
+-Prime News Hub is a modern, real-time news web application built with **React.js**. Stay updated with the latest news across multiple categories like Business, Health, Sports, Technology, and more, with a smooth, responsive interface.
 
 ---
 
@@ -21,11 +20,17 @@ Prime News Hub is a modern, real-time news web application built with **React.js
 
 ## Screenshots 🖼️
 
-![Home Page](link-to-screenshot.png)  
-*Home page displaying top news headlines*
+Home Page:
 
-![Category View](link-to-screenshot.png)  
-*View news by categories*
+![Home Page](Screenshorts/Home.png)
+
+Science News:
+
+![Science News](Screenshorts/Science.png)
+
+About Page:
+
+![About Page](Screenshorts/About.png)
 
 ---
 
@@ -44,13 +49,17 @@ Prime News Hub is a modern, real-time news web application built with **React.js
    ```bash
    git clone https://github.com/Aamir-sf/Prime-News-Hub.git
 2. Install dependencies:
+   ```bash
    npm install
-3. Create a .env file in the root folder and add your NewsAPI key:
+4. Create a .env file in the root folder and add your NewsAPI key:
+   ```bash
    REACT_APP_NEWS_API=YOUR_API_KEY
-4. Start the application:
+6. Start the application:
+   ```bash
    npm start
 
 📦 Folder Structure
+   ```bash
 Prime-News-Hub/
 ├── public/
 ├── src/
@@ -66,7 +75,3 @@ Prime-News-Hub/
 ├── package.json
 └── README.md
 
-=======
-# News_Hub
-A modern React news web app with categories, search, and infinite scroll.
->>>>>>> 5ca822a486cbd6d87918449bbfd385ef1c4171d0
