@@ -1,6 +1,6 @@
 # 📰 Prime News Hub By Aamir
 
-[API Used](https://newsapi.org/)
+[API Used](https://newsdata.io/)
 
 -Prime News Hub is a modern, real-time news web application built with **React.js**. Stay updated with the latest news across multiple categories like Business, Health, Sports, Technology, and more, with a smooth, responsive interface.
 
